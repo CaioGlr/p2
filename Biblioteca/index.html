@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Sistema de Biblioteca</h2>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="cadastro-aluno-tab" data-toggle="tab" href="#cadastro-aluno" role="tab" aria-controls="cadastro-aluno" aria-selected="true">Cadastro de Aluno</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cadastro-livro-tab" data-toggle="tab" href="#cadastro-livro" role="tab" aria-controls="cadastro-livro" aria-selected="false">Cadastro de Livro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cadastro-locacao-tab" data-toggle="tab" href="#cadastro-locacao" role="tab" aria-controls="cadastro-locacao" aria-selected="false">Cadastro de Locação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="lista-aluno-tab" data-toggle="tab" href="#lista-aluno" role="tab" aria-controls="lista-aluno" aria-selected="false">Lista de Alunos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="lista-livro-tab" data-toggle="tab" href="#lista-livro" role="tab" aria-controls="lista-livro" aria-selected="false">Lista de Livros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="lista-locacao-tab" data-toggle="tab" href="#lista-locacao" role="tab" aria-controls="lista-locacao" aria-selected="false">Lista de Locações</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Cadastro de Aluno -->
+            <div class="tab-pane fade show active" id="cadastro-aluno" role="tabpanel" aria-labelledby="cadastro-aluno-tab">
+                <h3 class="mt-4">Cadastro de Aluno</h3>
+                <form>
+                    <!-- Formulário de Cadastro de Aluno -->
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite o nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite o email">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="Digite o telefone">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="dataNascimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+            
+            <!-- Cadastro de Livro -->
+            <div class="tab-pane fade" id="cadastro-livro" role="tabpanel" aria-labelledby="cadastro-livro-tab">
+                <h3 class="mt-4">Cadastro de Livro</h3>
+                <form>
+                    <!-- Formulário de Cadastro de Livro -->
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" class="form-control" id="titulo" placeholder="Digite o título do livro">
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Autor</label>
+                        <input type="text" class="form-control" id="autor" placeholder="Digite o autor do livro">
+                    </div>
+                    <div class="form-group">
+                        <label for="editora">Editora</label>
+                        <input type="text" class="form-control" id="editora" placeholder="Digite a editora do livro">
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Ano de Publicação</label>
+                        <input type="number" class="form-control" id="ano" placeholder="Digite o ano de publicação">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+            
+            <!-- Cadastro de Locação -->
+            <div class="tab-pane fade" id="cadastro-locacao" role="tabpanel" aria-labelledby="cadastro-locacao-tab">
+                <h3 class="mt-4">Cadastro de Locação</h3>
+                <form>
+                    <!-- Formulário de Cadastro de Locação -->
+                    <div class="form-group">
+                        <label for="aluno">Aluno</label>
+                        <input type="text" class="form-control" id="aluno" placeholder="Digite o nome do aluno">
+                    </div>
+                    <div class="form-group">
+                        <label for="livro">Livro</label>
+                        <input type="text" class="form-control" id="livro" placeholder="Digite o título do livro">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataLocacao">Data de Locação</label>
+                        <input type="date" class="form-control" id="dataLocacao">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataDevolucao">Data de Devolução</label>
+                        <input type="date" class="form-control" id="dataDevolucao">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+            
+            <!-- Lista de Alunos -->
+            <div class="tab-pane fade" id="lista-aluno" role="tabpanel" aria-labelledby="lista-aluno-tab">
+                <h3 class="mt-4">Lista de Alunos</h3>
+                <input class="form-control mb-4" id="buscar-aluno" type="text" placeholder="Buscar Aluno">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Data de Nascimento</th>
+                            <th>Endereço</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-aluno">
+                        <!-- Linhas de alunos vão aqui -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Lista de Livros -->
+            <div class="tab-pane fade" id="lista-livro" role="tabpanel" aria-labelledby="lista-livro-tab">
+                <h3 class="mt-4">Lista de Livros</h3>
+                <input class="form-control mb-4" id="buscar-livro" type="text" placeholder="Buscar Livro">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Editora</th>
+                            <th>Ano de Publicação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-livro">
+                        <!-- Linhas de livros vão aqui -->
+                    </tbody>
+                </table>
+            </div>
+
+             <!-- Lista de Locações -->
+             <div class="tab-pane fade" id="lista-locacao" role="tabpanel" aria-labelledby="lista-locacao-tab">
+                <h3 class="mt-4">Lista de Locações</h3>
+                <input class="form-control mb-4" id="buscar-locacao" type="text" placeholder="Buscar Locação">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Livro</th>
+                            <th>Data de Locação</th>
+                            <th>Data de Devolução</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-locacao">
+                        <!-- Linhas de locações vão aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+            
