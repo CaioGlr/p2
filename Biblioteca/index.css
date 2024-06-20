@@ -1,0 +1,15 @@
+
+    footer {
+      text-align: center; 
+      margin-top: 20px; 
+      background-color: #f8f9fa; 
+      padding: 10px; 
+    }
+
+    address {
+      font-style: normal; /* Garante que o texto do endereço não seja itálico */
+      line-height: 1.5; /* Espaçamento entre linhas */
+    }
+  
+  
+
