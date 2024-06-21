@@ -42,7 +42,7 @@ $(document).ready(function() {
     // Evento do botão "Salvar Seleção"
     $('#btnSalvar').click(function() {
       // Exemplo de ação ao salvar (pode ser substituído por envio para o backend)
-      if (livrosSelecionados.length > 0) {
+      if (livrosSelecionados.length > 3) {
         alert(`Livros selecionados: ${livrosSelecionados.join(', ')}`);
         // Aqui você pode enviar os livros selecionados para o backend, por exemplo
         // $.post('url_do_backend', { livros: livrosSelecionados }, function(response) {

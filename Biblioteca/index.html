@@ -6,7 +6,8 @@
     <title>Sistema de Biblioteca</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="cadastro.js">
-    <link href="styles.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <script src="comportamentos.js"></script>
 </head>
 <body>
     <div class="container mt-5">
@@ -60,7 +61,6 @@
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </form>
             </div>
-            
             <!-- Cadastro de Livro -->
             <div class="tab-pane fade" id="cadastro-livro" role="tabpanel" aria-labelledby="cadastro-livro-tab">
                 <h3 class="mt-4">Cadastro de Livro</h3>
@@ -70,32 +70,32 @@
                             <div class="container mt-5">
                                 <h2>Seleção de Livros (selecione até 3)</h2>
                             
-                                <div id="livros" class="list-group">
-                                  <!-- Lista de livros será adicionada aqui -->
-                                  <div class="list-group-item">
-                                    <input type="checkbox" id="livro1" value="Dom Quixote">
-                                    <label for="livro1">Dom Quixote</label>
-                                  </div>
-                                  <div class="list-group-item">
-                                    <input type="checkbox" id="livro2" value="Harry Potter e a Pedra Filosofal">
-                                    <label for="livro2">Harry Potter e a Pedra Filosofal</label>
-                                  </div>
-                                  <div class="list-group-item">
-                                    <input type="checkbox" id="livro3" value="1984">
-                                    <label for="livro3">1984</label>
-                                  </div>
-                                  <div class="list-group-item">
-                                    <input type="checkbox" id="livro4" value="O Pequeno Príncipe">
-                                    <label for="livro4">O Pequeno Príncipe</label>
-                                  </div>
-                                  <div class="list-group-item">
-                                    <input type="checkbox" id="livro5" value="Orgulho e Preconceito">
-                                    <label for="livro5">Orgulho e Preconceito</label>
-                                  </div>
-                                  <div class="list-group-item">
-                                    <input type="checkbox" id="livro6" value="Cem Anos de Solidão">
-                                    <label for="livro6">Cem Anos de Solidão</label>
-                                  </div>
+                                <div class="tab-pane fade" id="cadastro-livro" role="tabpanel" aria-labelledby="cadastro-livro-tab">
+                                    <h3 class="mt-4">Cadastro de Livro</h3>
+                                    <form>
+
+                                        <h1>Seleção de Livros (Máximo 3)</h1>
+                                        <p class>Selecione no máximo 3 livros.</p>
+                                        <ul class="container" id="livros">
+                                            <li onclick="toggleSelection(this)">Livro 1</li>
+                                            <li onclick="toggleSelection(this)">Livro 2</li>
+                                            <li onclick="toggleSelection(this)">Livro 3</li>
+                                            <li onclick="toggleSelection(this)">Livro 4</li>
+                                            <li onclick="toggleSelection(this)">Livro 5</li>
+                                        </ul>
+                                    </form>
+                                        <script>
+                                            function toggleSelection(li) {
+                                                li.classList.toggle('selected');
+                                                var selectedItems = document.querySelectorAll('.selected');
+                                                if (selectedItems.length > 3) {
+                                                    li.classList.remove('selected');
+                                                    alert('Você só pode selecionar até 3 livros.');
+                                                }
+                                            }
+                                        </script>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    </form>
                                 </div>
                             
                                 <div id="mensagem" class="alert alert-info mt-3" style="display: none;">
