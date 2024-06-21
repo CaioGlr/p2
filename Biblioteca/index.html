@@ -78,16 +78,7 @@
                                             <li class="op" onclick="toggleSelection(this)">Simpsons</li>
                                         </ul>
                                     </form>
-                                        <script>
-                                            function toggleSelection(li) {
-                                                li.classList.toggle('selected');
-                                                var selectedItems = document.querySelectorAll('.selected');
-                                                if (selectedItems.length > 3) {
-                                                    li.classList.remove('selected');
-                                                    alert('Você só pode selecionar até 3 livros.');
-                                                }
-                                            }
-                                        </script>
+                                        
                                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                                     </form>
                                 </div>
@@ -101,9 +92,6 @@
                           Você selecionou <span id="contadorSelecionados">0</span> livro(s). Limite máximo alcançado.
                         </div>
                       </div>
-                     
-            
-    
                 </form>
             </div>
             
@@ -195,6 +183,7 @@
 
 
     <!-- Bootstrap JS and dependencies -->
+    <script src="./comportamentos.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
